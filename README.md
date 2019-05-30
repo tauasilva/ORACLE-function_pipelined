@@ -1,6 +1,10 @@
 # ORACLE-function_pipelined
 Exemplo de criação de funções pipelined no ORACLE
 
+![Alt Text](https://github.com/tauasilva/ORACLE-function_pipelined/blob/master/Select_usando_pipelined.PNG)
+
+Projeto possui dois exemplos de uso para a function pipelined.
+
 #Pipelined Table Functions
 Data is said to be pipelined if it is consumed by a consumer (transformation) as soon as the producer (transformation) produces it, without being staged in tables or a cache before being input to the next transformation.
 
@@ -23,5 +27,11 @@ In the rest of this chapter, the term table function is used to refer to a pipel
 
 Font: https://docs.oracle.com/cd/B28359_01/appdev.111/b28425/pipe_paral_tbl.htm
 
-Exemplos de alguns cases de uso para a function pipelined.
+
+
+
+
+
+
+
 
