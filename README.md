@@ -1,12 +1,13 @@
 # ORACLE-function_pipelined
 Exemplo de criação de funções pipelined no ORACLE
 
+/*Exemplo 01*/
 *CREATE OR REPLACE FUNCTION FUN_PIPELINED_EXEMPLO_01 (p_param NUMBER)
 RETURN TP_NUMERO 
 PIPELINED IS
     i_loop INTEGER;
     numeros TP_NUMERO := TP_NUMERO();
-BEGIN
+*BEGIN
 	/* Inicio da regra que a função vai conter*/
     *IF (p_param IN (1,2,3)) THEN 
         numeros := TP_NUMERO(10,20,30); 
@@ -20,7 +21,7 @@ BEGIN
     END IF;    
 	/* fim da regra que a função vai conter*/
 
-  FOR i IN 1.. i_loop LOOP
+  *FOR i IN 1.. i_loop LOOP
     PIPE ROW(numeros(i));
 	/* Vai retornar registro por registro */
   END LOOP;
